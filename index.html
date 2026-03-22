@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-Block Day</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/jpeg" href="public/favicon.jpg">
+</head>
+
+<body>
+
+  <div class="app">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <div class="logo">3-BLOCK DAY</div>
+        <div class="date-display" id="dateDisplay">—</div>
+      </div>
+      <div class="day-counter">
+        <div class="num" id="dayCount">0</div>
+        <div class="label">days done</div>
+      </div>
+    </div>
+
+    <!-- Week strip -->
+    <div class="week-strip" id="weekStrip"></div>
+
+    <!-- Progress -->
+    <div class="progress-section">
+      <div class="progress-header">
+        <div class="progress-label">Today's Progress</div>
+        <div class="progress-pct" id="totalPct">0%</div>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="totalFill" style="width:0%"></div>
+      </div>
+      <div class="block-progress-row">
+        <div class="mini-prog">
+          <div class="mini-prog-fill" id="prog0" style="width:0%;background:#b047ff"></div>
+        </div>
+        <div class="mini-prog">
+          <div class="mini-prog-fill" id="prog1" style="width:0%;background:#e8ff47"></div>
+        </div>
+        <div class="mini-prog">
+          <div class="mini-prog-fill" id="prog2" style="width:0%;background:#ff6b35"></div>
+        </div>
+        <div class="mini-prog">
+          <div class="mini-prog-fill" id="prog3" style="width:0%;background:#47c4ff"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blocks -->
+    <div class="section-title">Your Three Blocks</div>
+    <div class="blocks" id="blocksContainer"></div>
+
+    <!-- Stats -->
+    <div class="section-title">This Week</div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num" id="statBlocks" style="color:var(--accent)">0</div>
+        <div class="stat-label">Blocks Done</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="statTasks" style="color:var(--accent2)">0</div>
+        <div class="stat-label">Tasks Done</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="statStreak" style="color:var(--accent3)">0</div>
+        <div class="stat-label">Day Streak</div>
+      </div>
+    </div>
+
+    <div class="reset-row">
+      <button class="reset-btn" onclick="resetDay()">↺ reset today</button>
+    </div>
+  </div>
+
+  <!-- Motivational bar -->
+  <div class="motive-bar" id="motiveBar">
+    <span>BLOCK 1</span> ends at 12:00 PM — reset, then go again
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js" defer></script>
+</body>
+
+</html>
